@@ -3,6 +3,10 @@
 
 IP地址会变化的情况下开发。
 
+## 使用方法和详细说明
+
+[开源一个DDNS客户端，支持秒级检测快速响应](https://www.echoteen.com/ddns-php-clients.html "开源一个DDNS客户端，支持秒级检测快速响应")
+
 ## 主要架构
 使用的是php脚本，memcached为缓存，DNSPOD作为DNS服务商，需要先在DNSPOD获取
 
