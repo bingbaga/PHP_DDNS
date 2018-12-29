@@ -6,5 +6,11 @@
  * Time: 14:35
  */
 return $config=[
-    'token'=>'id,secret',
+    'memcached'=>[
+        'server'=>'127.0.0.1',//缓存服务器的ip
+        'port'=>'11211'//缓存服务器的端口
+    ],
+    'check_time'=>10,//检测时间
+    'token'=>'id,secret',//dnspod token使用id和密钥拼接
+    'domain'=>'',//ddns 主机地址
 ];

@@ -12,9 +12,11 @@ class dae {
     protected $pool = NULL;
     public $pidfile;
     public $stop = false;
+    public $check_time = 10;
 
-    public function __construct() {
+    public function __construct($check_time) {
         $this->pidfile = __DIR__ . '/' . self::PIDNAME . '.pid';
+        $this->check_time=$check_time;
     }
 
     private function daemon() {
@@ -52,7 +54,7 @@ class dae {
             }
             call_user_func_array($this->job['function'],$this->job['param']);
             //echo "I am alive" . mt_rand(0,20) . "...\n";
-            sleep(5);
+            sleep($this->check_time);
         } while (true);
         echo ("进程退出\n");
     }
