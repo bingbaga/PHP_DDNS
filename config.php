@@ -12,5 +12,6 @@ return $config=[
     ],
     'check_time'=>10,//检测时间
     'token'=>'id,secret',//dnspod token使用id和密钥拼接
-    'domain'=>'',//ddns 主机地址
+    'domain'=>'',//ddns 域名 例如配置test.demo.com这里写demo.com
+    'sub_domain'=>''//二级域名，如上，这里是test 就可以完美解析到test.demo.com
 ];

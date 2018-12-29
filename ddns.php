@@ -13,7 +13,7 @@ function ddns($lib,$cache, $config){
     sleep(10);
     $newip=$lib->getIP();
     if($newip!=$ip){
-        $img=$lib->updateDdns($config['domain'],'img',$cache);
+        $img=$lib->updateDdns($config['domain'],$config['sub_domain'],$cache);
         if($img){
             $lib->log('success update ip address. '.'latest ip is : '.$newip.' and old is: '.$ip);
         }else{
